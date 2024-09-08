@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnapVibe</title>
+    
 </head>
 <body>
 
@@ -61,13 +61,12 @@ CHAT_SERVICE_URL=your_chat_service_url</code></pre>
     <li>Commit your changes and push to your fork.</li>
     <li>Open a pull request with a detailed description of your changes.</li>
 </ol>
-<p>For detailed contribution guidelines, see <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>.</p>
 
-<h2>License</h2>
-<p>SnapVibe is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for more details.</p>
+
+
 
 <h2>Contact</h2>
-<p>For questions or feedback, please reach out to <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+<p>For questions or feedback, please reach out to <a href="mailto:av0082018@gmail.com">av0082018@gmail.com</a>.</p>
 
 </body>
 </html>
