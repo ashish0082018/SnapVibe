@@ -1,8 +1,17 @@
 import React from 'react'
+import Feed from './Feed'
+import { Outlet } from 'react-router-dom'
+import RightSidebar from './RightSidebar'
 
 function Home() {
   return (
-    <div></div>
+    <div className='flex'>
+       <div className='flex-grow'>    {/* very important property flex-grow */}
+    <Feed/>
+    <Outlet/>
+    </div>
+<RightSidebar/>
+    </div>
   )
 }
 

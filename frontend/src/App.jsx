@@ -1,3 +1,4 @@
+import Checks from "./components/Checks";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import MainLayout from "./components/MainLayout";
@@ -27,6 +28,10 @@ const browserRouter = createBrowserRouter([
   {
     path: "/signup",
     element: <Signup />,
+  },
+  {
+    path: "/checks",
+    element: <Checks />,
   },
 ]);
 
