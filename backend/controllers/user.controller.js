@@ -121,7 +121,7 @@ return res.cookie('token',token,{httpOnly:true,sameSite:'strict',maxAge:1*24*60*
 
 export const logout= async (req,res)=>{
   try{
-    res.cookie("Token","",{maxAge:0}).json({
+    res.cookie("token","",{maxAge:0}).json({
         message:"Logged Out Successfully",
         success:true
     })

@@ -25,7 +25,7 @@ function Signup() {
 
     const SignupHandler = async (e) => {
         e.preventDefault();
-        console.log(input);
+       
         try {
             setLoading(true)
             const res =await axios.post('http://localhost:8000/api/v1/user/register',input,{
@@ -35,6 +35,7 @@ function Signup() {
                  withCredentials:true
             })
             if(res.data.success){
+               
                 navigate("/login");
                 toast.success(res.data.message);
                 setInput({

@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar'
-
+import axios from 'axios'
 import { Heart, Home, LogOut, MessageCircle, PlusSquare, Search, TrendingUp } from 'lucide-react'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -24,43 +24,44 @@ const sidebarItems=[
 function LeftSidebar() {
 const navigate=useNavigate();
 
-    // MAking logout feature
-    // const logoutHandler=async ()=>{
-    //     try{
+    //MAking logout feature
+    const logoutHandler=async ()=>{
+        try{
             
-    //         const res=await axios.get('http://localhost:8000/api/v1/user/logout',{withCredentials:true});
-    //         if(res.data.success){
+            const res=await axios.get('http://localhost:8000/api/v1/user/logout',{withCredentials:true});
+            if(res.data.success){
                
-    //             navigate('/login');
-    //             toast.success(res.data.message);
-    //         }
+                navigate('/login');
+                toast.success(res.data.message);
+            }
             
 
 
-    //     }
-    //     catch(error){
-    //         toast.error(error.response.data.message)
-    //     }
-    // }
-
-    const logoutHandler = async () => {
-        try {
-            const res = await axios.get('http://localhost:8000/api/v1/user/logout', { withCredentials: true });
-            if (res.data.success) {
-                toast.success(res.data.message);
-                navigate('/login');
-            }
-        } catch (error) {
-            console.error('Error during logout:', error); // Debugging line
-            const errorMessage = error.response?.data?.message || 'An unexpected error occurred';
-            toast.error(errorMessage);
         }
-    };
+        catch(error){
+            toast.error(error.response.data.message)
+        }
+    }
+
+    // const logoutHandler = async () => {
+    //     try {
+    //         const res = await axios.get('http://localhost:8000/api/v1/user/logout', { withCredentials: true });
+    //         if (res.data.success) {
+    //             toast.success(res.data.message);
+    //             navigate('/login');
+    //         }
+    //     } catch (error) {
+            
+    //         console.error('Error during logout:', error); // Debugging line
+    //         const errorMessage = error.response?.data?.message || 'An unexpected error occurred';
+    //         toast.error(errorMessage);
+    //     }
+    // };
 
 
 // sidebarHandler logic
 const sidebarHandler=(textType)=>{
-if(textType === 'Logout') logoutHandler();
+if(textType === "Logout") logoutHandler();
 }
 
 
